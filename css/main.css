@@ -366,103 +366,217 @@ img {
   padding: 10px 55px;
 }
 
+.site-nav {
+  display: none;
+}
+
+.contact-list {
+  display: none;
+}
+
+.burger-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 0;
+}
+
+.burger-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #ECECEC;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  transition: visibility 250ms var(--transition-timing-function), opacity 250ms var(--transition-timing-function);
+  background-color: var(--primery-white-colour);
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
 }
 
-.site-nav :not(:last-child) {
-  margin-right: 50px;
+.close-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 0;
 }
 
-.site-nav__link {
+.close-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-menu__container {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 25px;
+}
+
+.nav-list {
+  margin-bottom: 302px;
+}
+
+.nav-list :not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.nav-list__link {
+  font-size: 40px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--title-text-colour);
   transition: color 250ms var(--transition-timing-function);
 }
 
-.site-nav__link:hover, .site-nav__link:focus {
+.nav-list__link:hover {
   color: var(--accent-colour);
 }
 
-.site-nav__link_current {
-  color: var(--accent-colour);
-  position: relative;
+.mobile-contact-list {
+  margin-bottom: 64px;
 }
 
-.site-nav__link_current::after {
-  position: absolute;
-  bottom: -32px;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-colour);
-  border-radius: 2px;
+.mobile-contact-list :not(:last-child) {
+  margin-bottom: 32px;
 }
 
-.contact-list {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.contact-list :not(:last-child) {
-  margin-right: 50px;
-}
-
-.contact-list__link {
-  display: flex;
-  align-items: center;
+.mobile-contact-list__tel-link {
+  font-size: 34px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.18;
   letter-spacing: 0.02em;
+  color: var(--primary-text-colour);
   transition: color 250ms var(--transition-timing-function);
 }
 
-.contact-list__link:hover, .contact-list__link:focus {
+.mobile-contact-list__tel-link:hover {
   color: var(--accent-colour);
 }
 
-.contact-list__icon {
-  margin-right: 10px;
-  fill: currentColor;
+.mobile-contact-list__email-link {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-colour);
+  transition: color 250ms var(--transition-timing-function);
+}
+
+.mobile-contact-list__email-link:hover {
+  color: var(--accent-colour);
+}
+
+.mobile-social-list {
+  display: flex;
+}
+
+.mobile-socia-list__item {
+  position: relative;
+}
+
+.mobile-socia-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mobile-socia-list__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -21px;
+  width: 22px;
+  height: 0px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-social-list__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-colour);
 }
 
 .hero {
+  height: 400px;
   background: var(--dark-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/hero/mobile/hero-img-mobile.jpg");
   background-size: cover;
   text-align: center;
 }
 
+@media (min-device-pixel-ratio: 2) and (min-width: 280px), (min-resolution: 192dpi) and (min-width: 280px), (min-resolution: 2dppx) and (min-width: 280px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/hero/mobile/hero-img@2x-mobile.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/hero/hero-img-tablet.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/hero/hero-img@2x-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desctop/hero/hero-img-desctop.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desctop/hero/hero-img@2x-desctop.jpg");
+  }
+}
+
 .hero-container {
-  max-width: 1600px;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 
 .hero__title {
   margin-bottom: var(--primary-margin);
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primery-white-colour);

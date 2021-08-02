@@ -1,27 +1,79 @@
     .hero {
+        height: 400px;
         background: var(--dark-background-color);
         background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero/hero-bg.jpg);
+        url("../../images/mobile/hero/mobile/hero-img-mobile.jpg");
         background-size: cover;
-
         text-align: center;
         
     }
-    .hero-container {
-        max-width: 1600px;
-        margin: 0 auto;
-        padding-top: 200px;
-        padding-bottom: 200px;
+    @media (min-device-pixel-ratio: 2) and (min-width: 280px),
+    (min-resolution: 192dpi) and (min-width: 280px),
+    (min-resolution: 2dppx) and (min-width: 280px) {
+        .hero {
+            background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url("../../images/mobile/hero/mobile/hero-img@2x-mobile.jpg");
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .hero {
+            background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+            ),
+            url("../../images/tablet/hero/hero-img-tablet.jpg");
+            }
+    }
+    @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+    (min-resolution: 192dpi) and (min-width: 768px),
+    (min-resolution: 2dppx) and (min-width: 768px) {
+        .hero {
+            background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url("../../images/tablet/hero/hero-img@2x-tablet.jpg");
+        }
+    }
 
+    @media screen and (min-width: 1200px) {
+        .hero {
+            background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+            ),
+            url("../../images/desctop/hero/hero-img-desctop.jpg");
+            }
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    (min-resolution: 192dpi) and (min-width: 1200px),
+    (min-resolution: 2dppx) and (min-width: 1200px) {
+        .hero {
+            background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url("../../images/desctop/hero/hero-img@2x-desctop.jpg");
+        }
+    }
+   
+    .hero-container {
+        margin: 0 auto;
+        padding-top: 118px;
+        padding-bottom: 118px;
     }
     
     .hero__title {
         margin-bottom: var(--primary-margin);
 
-        @include font(44px, 900, 1.36);
+        @include font(26px, 900, 1.61);
         
         letter-spacing: 0.06em;
         text-transform: uppercase;

@@ -13,7 +13,7 @@
   </head>
   <body>
     <!--Шапка сайта -->
-    <!-- <header class="header">
+    <header class="header">
 
       <div class="container header-container">
       <nav class="menu">
@@ -24,6 +24,11 @@
           <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
         </ul>
       </nav>
+      <button type="button" class="burger-btn" data-menu-open>
+        <svg class="burger-btn__icon">
+          <use href="./images/sprite.svg#burger-icon"></use>
+        </svg>
+      </button>
       <ul class="contact-list list">
         <li class="contact-list__item">
           <a href="mailto:info@devstudio.com" class="contact-list__link link">
@@ -41,7 +46,49 @@
         </li>
       </ul>
     </div>
-    </header> -->
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button type="button" class="close-btn mobile-menu__close-btn" data-menu-close>
+          <svg class="close-btn__icon">
+            <use href="./images/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
+        <ul class="nav-list list">
+          <li class="nav-list__item">
+            <a href="" class="nav-list__link link">Студия</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="" class="nav-list__link link">Портфолио</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="" class="nav-list__link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-contact-list list">
+          <li class="mobile-contact-list__item">
+            <a href="mailto:info@devstudio.com" class="mobile-contact-list__tel-link link">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-contact-list__item">
+            <a href="tel:+380961111111" class="mobile-contact-list__email-link link">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-socia-list__item">
+            <a href="" class="mobile-social-list__link link">Instagram</a>
+          </li>
+          <li class="mobile-socia-list__item">
+            <a href="" class="mobile-social-list__link link">Twitter</a>
+          </li>
+          <li class="mobile-socia-list__item">
+            <a href="" class="mobile-social-list__link link">Facebook</a>
+          </li>
+          <li class="mobile-socia-list__item">
+            <a href="" class="mobile-social-list__link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </header>
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -106,34 +153,46 @@
         <ul class="our-work__list list">
           <li class="our-work__list-item">
             <div class="our-work__img-wrapper">
-            <img
-              src="./images/what-are-we-doing/box1.jpg"
-              width="370"
-              height="294"
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop1.webp 1x, ./images/desctop/work/work-img@2x-desctop1.webp 2x" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop1.jpg 1x, ./images/desctop/work/work-img@2x-desctop1.jpg 2x">
+                <img
+              src="#"
+              
               alt="работающий програмист в темном офисе"
             />
+              </picture>
+            
             <p class="our-work__img-description">Десктопные приложения</p>
           </div>
           </li>
           <li class="our-work__list-item">
             <div class="our-work__img-wrapper">
-            <img
-              src="./images/what-are-we-doing/box2.jpg"
-              width="370"
-              height="294"
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop2.webp 1x, ./images/desctop/work/work-img@2x-desctop2.webp 2x" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop2.jpg 1x, ./images/desctop/work/work-img@2x-desctop2.jpg 2x">
+                <img
+              src="#"
+              
               alt="веб-дизайнер работает над интерфейсом для мобильных телефонов"
             />
+              </picture>
+            
             <p class="our-work__img-description">Мобильные приложения</p>
           </div>
           </li>
           <li class="our-work__list-item">
             <div class="our-work__img-wrapper">
-            <img
-              src="./images/what-are-we-doing/box3.jpg"
-              width="370"
-              height="294"
-              alt="Творческий художник работает на графическом планшете "
-            />
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop3.webp 1x, ./images/desctop/work/work-img@2x-desctop3.webp 2x" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="./images/desctop/work/work-img-desctop3.jpg 1x, ./images/desctop/work/work-img@2x-desctop3.jpg 2x">
+                <img
+                  src="#"
+                  
+                  alt="Творческий художник работает на графическом планшете "
+                />
+              </picture>
+            
             <p class="our-work__img-description">Дизайнерские решения</p>
           </div>
           </li>
@@ -154,8 +213,8 @@
                 <source media="(min-width: 768px)" srcset="./images/tablet/team/team-img-tablet1.webp 1x, ./images/tablet/team/team-img@2x-tablet1.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" srcset="./images/tablet/team/team-img-tablet1.jpg 1x, ./images/tablet/team/team-img@2x-tablet1.jpg 2x">
 
-                <source media="(min-width: 280px)" srcset="./images/mobile/team/team-img-mobile1.webp 1x, ./images/mobile/team/team-img@2x-tablet1.webp 2x" type="image/webp">
-                <source media="(min-width: 280px)" srcset="./images/mobile/team/team-img-mobile1.jpg 1x, ./images/mobile/team/team-img@2x-tablet1.jpg 2x">
+                <source media="(min-width: 280px)" srcset="./images/mobile/team/team-img-mobile1.webp 1x, ./images/mobile/team/team-img@2x-mobile1.webp 2x" type="image/webp">
+                <source media="(min-width: 280px)" srcset="./images/mobile/team/team-img-mobile1.jpg 1x, ./images/mobile/team/team-img@2x-mobile1.jpg 2x">
                 <img
                 width="100%"
                 height="auto"
@@ -554,6 +613,7 @@
         </form>
       </div>
     </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
