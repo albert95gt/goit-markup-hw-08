@@ -1,15 +1,7 @@
-    .card-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: calc( -1 *  var(--primary-margin));
-        margin-left: calc( -1 *  var(--primary-margin));
-    }
-    .card-list__item {
-        flex-basis: calc((100% - 90px) / 3);
-        margin-top: var(--primary-margin);
-        margin-left: var(--primary-margin)
-    }
-    .card-list__link {
+   .card-list__item:not(:last-child) {
+       margin-bottom: 30px;
+   }
+   .card-list__link {
         display: block;
     
         transition: box-shadow 250ms var(--transition-timing-function);
@@ -62,4 +54,69 @@
     .card-list__desc {
         @include font(16px, 400, 1.87);
     }
+
+// .card-list {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     margin-top: calc( -1 *  var(--primary-margin));
+    //     margin-left: calc( -1 *  var(--primary-margin));
+    // }
+    // .card-list__item {
+    //     flex-basis: calc((100% - 90px) / 3);
+    //     margin-top: var(--primary-margin);
+    //     margin-left: var(--primary-margin)
+    // }
+    // .card-list__link {
+    //     display: block;
+    
+    //     transition: box-shadow 250ms var(--transition-timing-function);
+
+    //         &:hover {
+    //             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    //         }
+    // }
+    // .card-list__thumb{
+    //     position: relative;
+    //     overflow: hidden;
+    
+    // }
+    // .card-list__img-desc {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    
+    //     padding: 63px 24px;
+        
+    //     @include font(18px, 400, 1.56);
+    //     letter-spacing: 0.03em;
+        
+    //     color: var(--primery-white-colour);
+    //     background-color: rgba(33, 150, 243, 0.9);
+    //     overflow: auto;
+    
+    //     transform: translateY(100%);
+    //     transition: transform 250ms var(--transition-timing-function);
+
+    //         .card-list__link:hover &,
+    //         .card-list__link:focus & {
+    //         transform: translateY(0);
+    //         }
+    // }
+    // .card-list__content {
+    //     padding: 20px 24px;
+    //     border: 1px solid #EEEEEE;
+    //     border-top: 0;
+    // }
+    // .card-list__title {
+    //     margin-bottom: 4px;
+
+    //     @include font(18px, 700, 2);
+    //     letter-spacing: 0.06em;
+    //     color: var(--title-text-colour);
+    //     }
+    // .card-list__desc {
+    //     @include font(16px, 400, 1.87);
+    // }
     

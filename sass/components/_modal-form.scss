@@ -54,7 +54,7 @@
     .modal-form-massage-label {
         margin-bottom: 20px;
 
-        @include font(12px, 400, 1.17);
+        @include font(14px, 400, 1.14);
         
         letter-spacing: 0.01em;
         color: var(--primary-text-colour);
@@ -89,7 +89,7 @@
         display: flex;
         align-items: center;
         
-        @include font(14px, 400, 1.71);
+        @include font(12px, 400, 1.17);
        
         color: var(--primary-text-colour);
             &::before {
