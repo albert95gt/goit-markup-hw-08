@@ -4,5 +4,10 @@
         @include font(14px, 700, 1.14);
         
         text-transform: uppercase;
-        color: var(--title-text-colour)
+        color: var(--title-text-colour);
+    }
+    .subtitle_center {
+        @media screen and (max-width: 767px){
+        text-align: center;
+       }
     }

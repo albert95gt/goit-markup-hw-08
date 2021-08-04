@@ -1,6 +1,17 @@
    
     .flex-container {
-        text-align: center;
+        @media screen and (max-width: 1199px) {
+            text-align: center;
+        }
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: 1200px) {
+            align-items: baseline;
+        }
     }
     .footer {
         padding-top: 60px;
@@ -30,21 +41,29 @@
             }
     }
     
-    
-    .footer__address {
-    
-    margin-top: 20px;
-        & :not(:last-child) {
-            margin-bottom: 9px;
+    .footer-address__list {
+        margin-top: 20px;
+    }
+    .footer-address__list-item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+            @media screen and (min-width: 1200px) {
+                margin-bottom: 9px;
+            }
+
         }
-        @media screen and (max-width: 1190px) {
+        @media screen and (max-width: 1199px) {
             margin-bottom: 60px;
         }
     }
     
     .footer__sidebar {
-        margin-bottom: 60px;
-    // margin-left: 70px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-left: 70px;
+        }
     }
     .footer__label {
     margin-bottom: 20px;
@@ -55,7 +74,9 @@
     color: var(--primery-white-colour)
     }
     .footer__form {
-    // margin-left: 93px;
+        @media screen and (min-width: 1200px) {
+            margin-left: 93px;
+        }
     }
     .footer__form-desc {
     display: block;
@@ -67,10 +88,14 @@
     color: var(--primery-white-colour);
     }
     .footer__email-form {
-    // display: flex;
+      @media screen and (min-width: 1200px) {
+          display: flex;
+      }  
     }
     .footer__email-form-label {
-    margin-right: 12px;
+        @media screen and (min-width: 1200px) {
+            margin-right: 12px;
+        }
     }
     .footer__email-form-input {
     width: 358px;
@@ -91,8 +116,8 @@
             
             color: rgba(255, 255, 255, 0.6);
         }
-        @media screen and (max-width: 1190px) {
-            margin-bottom: 10px;
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 20px;
         }
     }
     

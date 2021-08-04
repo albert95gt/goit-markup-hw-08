@@ -1,14 +1,41 @@
+ .feautures {
+     @media screen and (min-width: 1200px) {
+         padding-bottom: 48px;
+     }
+ }
  .feautures__icon-container {
      margin-bottom: 30px;
-    
+     display: flex;
+     align-items: center;
      background-color: var(--secondary-background-color);
      border-radius: 4px;
  }
- .feautures__list-item {
-    &:not(:last-child) {
-     margin-bottom: 30px;
-    }
+ .feautures__list {
+     @media screen and (min-width: 768px) {
+         display: flex;
+         flex-wrap: wrap;
+         margin-top: calc( -1 *  var(--primary-margin));
+         margin-left: calc( -1 *  var(--primary-margin));
+     }
 }
+ .feautures__list-item {
+    @media screen and (max-width: 767px) {
+  
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 60px) / 2);
+        margin-top: var(--primary-margin);
+        margin-left: var(--primary-margin);
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 120px) / 4);
+        margin-top: var(--primary-margin);
+        margin-left: var(--primary-margin);
+    }
+}   
   .feautures__icon {
         margin: 0 auto;
         width: 100%;
@@ -17,38 +44,5 @@
  .feauture__desc {
         line-height: 1.71;
     }
- .subtitle_center {
-     text-align: center;
- }
  
- // .feautures {
-    //     padding-top: 94px;
-    //     padding-bottom: 47px;
-    // }
-    // .feautures__list{
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     margin-top: calc( -1 *  var(--primary-margin));
-    //     margin-left: calc( -1 *  var(--primary-margin));
-    // }
-    // .feautures__list-item{
-    //     flex-basis: calc((100% - 120px) / 4);
-    //     margin-top: var(--primary-margin);
-    //     margin-left: var(--primary-margin);
-    // }
-    // .feautures__icon-container {
-    //     display: flex;
-    //     align-items: center;
-    //     margin-bottom: 30px;
-    //     height: 120px;
-    //     background-color:var(--secondary-background-color);
-    //     border-radius: 4px;
-    // }
-    // .feautures__icon {
-    //     margin: 0 auto;
-    //     width: 70px;
-    //     height: 70px;
-    // }
-    // .feauture__desc {
-    //     line-height: 1.71;
-    //     }
+ 

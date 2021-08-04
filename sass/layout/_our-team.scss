@@ -1,15 +1,39 @@
+    .our-team__list {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc( -1 *  var(--primary-margin));
+            margin-left: calc( -1 *  var(--primary-margin));
+        }
+    }
+
     .our-team__list-item {
         background-color: var(--primery-white-colour);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-
+        @media screen and (max-width: 767px){
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
+        }    
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 60px) / 2);
+            margin-top: var(--primary-margin);
+            margin-left: var(--primary-margin);
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 120px) / 4);
+            margin-top: var(--primary-margin);
+            margin-left: var(--primary-margin);
+        }
     }
     .our-team__card-content {
         padding-top: 30px;
         padding-bottom: 24px;
+
+        @media screen and (min-width: 1200px) {
+            padding-bottom: 30px;
+        }
    }
 
     .our-team__subtitle {
@@ -33,42 +57,5 @@
     }
     
 
-    // .our-team__list {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     margin-top: calc( -1 *  var(--primary-margin));
-    //     margin-left: calc( -1 *  var(--primary-margin));
-    // }
-    // .our-team__list-item {
-    // flex-basis: calc((100% - 120px) / 4);
-    //     margin-top: var(--primary-margin);
-    //     margin-left: var(--primary-margin);
 
-    //     background-color: var(--primery-white-colour);
-    //     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    //     border-radius: 0px 0px 4px 4px;
-    // }
-    // .our-team__card-content {
-    //     padding: 30px 30px;
-    // }
-
-    // .our-team__subtitle {
-    //     margin-bottom: 10px;
-        
-    //     @include font(16px, 500, 1.19);
-        
-    //     text-align: center;
-        
-    //     color: var(--title-text-colour);
-    //     }
-    // .our-team {
-    //     background: var(--secondary-background-color)
-    // }  
-    // .our-team__desc {
-    //     margin-bottom: 16px;
-        
-    //     @include font(16px, 400, 1.19);
-        
-    //     text-align: center;
-    // }
    

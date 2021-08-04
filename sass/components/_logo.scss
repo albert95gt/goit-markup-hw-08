@@ -2,6 +2,9 @@
     font-family: 'Raleway', sans-serif;
     @include font(24px, 700, 1.17);
     
+    @media screen and (min-width: 1200px) {
+        @include font (26px, 700, 1.19)
+    }
     
     }
 .logo__accent {
