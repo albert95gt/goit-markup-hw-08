@@ -640,7 +640,7 @@ img {
 
 .site-nav__link_current::after {
   position: absolute;
-  bottom: -32px;
+  bottom: -34px;
   content: "";
   display: block;
   width: 100%;
@@ -651,7 +651,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .site-nav__link_current::after {
-    bottom: -31px;
+    bottom: -32px;
   }
 }
 
