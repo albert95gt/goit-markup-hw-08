@@ -78,6 +78,9 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--primery-white-colour);
+        @media screen and (min-width: 1200px) {
+            @include font (44px, 900, 1.36)
+        }
     }
     .hero__button{
         padding: 10px 32px;

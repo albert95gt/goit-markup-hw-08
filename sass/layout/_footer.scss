@@ -98,7 +98,7 @@
         }
     }
     .footer__email-form-input {
-    width: 358px;
+    width: 100%;
     height: 50px;
 
     padding-left: 16px;
@@ -116,9 +116,17 @@
             
             color: rgba(255, 255, 255, 0.6);
         }
+        
+        @media acreen and (min-width: 767px) {
+            width: 450px;
+        }
         @media screen and (max-width: 1199px) {
             margin-bottom: 20px;
         }
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
+        
     }
     
     
