@@ -133,7 +133,9 @@
         transform: rotate(90deg);
     }
     &:first-child {
+        @media screen and (max-width: 397px) {
         margin-bottom: 10px;
+        }
     }
 }
 .mobile-social-list__link {

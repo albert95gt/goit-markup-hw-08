@@ -576,8 +576,10 @@ img {
   transform: rotate(90deg);
 }
 
-.mobile-socia-list__item:first-child {
-  margin-bottom: 10px;
+@media screen and (max-width: 397px) {
+  .mobile-socia-list__item:first-child {
+    margin-bottom: 10px;
+  }
 }
 
 .mobile-social-list__link {
