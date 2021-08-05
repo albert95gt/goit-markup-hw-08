@@ -1169,7 +1169,7 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media acreen and (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .footer__email-form-input {
     width: 450px;
   }
