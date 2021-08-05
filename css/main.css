@@ -590,13 +590,16 @@ img {
   color: var(--accent-colour);
 }
 
+.header {
+  border-bottom: 1px solid #ECECEC;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #ECECEC;
 }
 
 @media screen and (min-width: 768px) {
@@ -747,7 +750,6 @@ img {
 }
 
 .hero {
-  height: 400px;
   background: var(--dark-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/mobile/hero-img-mobile.jpg");
   background-size: cover;
@@ -788,6 +790,13 @@ img {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {

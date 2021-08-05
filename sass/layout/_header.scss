@@ -1,3 +1,6 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
 .header-container {
     display: flex;
     align-items: center;
@@ -5,8 +8,6 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
-    border-bottom: 1px solid #ECECEC;
-    
     @media screen and (min-width: 768px) {
         padding-top: 21px;
         padding-bottom: 21px;
