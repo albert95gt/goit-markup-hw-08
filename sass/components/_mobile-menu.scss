@@ -73,6 +73,9 @@
     &_current {
         color: var(--accent-colour);
     }
+    @media screen and (max-width: 479px) {
+        font-size: 36px;
+    }
 }
 .mobile-contact-list {
     margin-bottom: 64px;
@@ -92,6 +95,9 @@
     &:focus {
         color: var(--accent-colour);
     }
+    @media screen and (max-width: 479px) {
+        font-size: 30px;
+    }
 }
 .mobile-contact-list__email-link {
     margin-bottom: 32px;
@@ -107,6 +113,7 @@
 }
 .mobile-social-list {
     display: flex;
+    flex-wrap: wrap;
 }
 .mobile-socia-list__item {
     position: relative;

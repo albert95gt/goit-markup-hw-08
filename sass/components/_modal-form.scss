@@ -91,6 +91,7 @@
     .modal-form-chekbox-label{
         margin-bottom: 30px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         
         @include font(12px, 400, 1.17);

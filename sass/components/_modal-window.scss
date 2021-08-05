@@ -3,25 +3,22 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100%;
-        max-height: 100%;
-    
         transform: translate(-50%,-50%);
     
         background-color: var(--primery-white-colour);
-        
+        @media screen and (max-width: 1199px) {
+            width: 450px;
+            height: 609px;
+            overflow: auto;
+            @media screen and (max-width: 459px) {
+              width: 95%;
+            }
+            @media screen and (max-height: 609px) {
+              height: 100%;
+            }
+          }
 
-        // @media screen and (max-width: 1200px) {
-        //     width: 450px;
-        //     height: 609px;
-        //     overflow: auto;
-        // @media screen and (max-width: 459px) {
-        //       width: 95%;
-        //     }
-        // @media screen and (max-height: 609px) {
-        //       height: 100%;
-        //     }
-        //   }
+
     }
     .close-btn {
         position: absolute;
